@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+.task-manager {
+    width: 450px;
+    min-height: 700px;
+    margin-top: 50px;
+    border: 2px solid lightgrey;
+    padding: 20px;
+    background-color: white;
+}
+
+.top-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.set-reminder-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-button {
+    background-color: rgba(239, 49, 49, 0.825);
+    color: white;
+    width: 70px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.close-button:hover {
+    filter: brightness(120%);
+    cursor: pointer;
+}
+
+.close-button:active {
+    transform: translateY(2px);
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+}
+
+#check-box {
+    width: 20px;
+    margin: 0 auto;
+}
+
+.save-task-button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.save-task-button:hover {
+    cursor: pointer;
+}
+
+.save-task-button:active {
+    transform: translateY(2px);
+}
+
+.task-container {
+    min-height: 350px;
+}
+
+.task {
+    display: flex;
+    background-color: rgba(223, 223, 223, 0.714);
+    border-left: 7px solid green;
+    padding: 10px;
+    margin-bottom: 6px;
+}
+
+.task:hover {
+    filter: brightness(80%); 
+}
+
+.push-x {
+    width: 100%;
+}
+
+i {
+    color: red;
+    width: 100%;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.copyright-container {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
