@@ -2,6 +2,7 @@ const saveTaskBtn = document.querySelector('.save-task-button');
 const addTask = document.getElementById('add-task');
 const dayTime = document.getElementById('day-time');
 const taskContainer = document.querySelector('.task-container');
+const checkBox = document.getElementById('check-box');
 
 const today = new Date().toISOString().split('T')[0];
 dayTime.setAttribute('min', today);
@@ -20,12 +21,23 @@ function init() {
     })
 }
 
+// const dateFormatter = function(time) {
+//     const months = [
+//         'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+//         'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+//       ];
+//     const timeFormat = time.split('-');
+//     console.log(months[timeFormat[1].toNumber()])
+//     return 'months[timeFormat[1]':
+// }
+
 
 addTask.addEventListener('input', function() {
     taskExist = false;
 });
 
 saveTaskBtn.addEventListener('click', function() {
+    // dateFormatter(dayTime.value)
     if (!taskContainer.children[0]) {
         taskExist = false;
     }
@@ -34,6 +46,9 @@ saveTaskBtn.addEventListener('click', function() {
     // Create main div
     const div = document.createElement('div');
     div.classList.add('task');
+    if (checkBox.checked) {
+        div.classList.add('green-border');
+    }
     // Create headings div
     const headings = document.createElement('div');
     headings.classList.add('push-x');
@@ -55,6 +70,7 @@ saveTaskBtn.addEventListener('click', function() {
     div.appendChild(headings);
     div.appendChild(cross);
     taskContainer.appendChild(div);
+    checkBox.checked = false;
     init();
     }
 });

@@ -90,9 +90,12 @@ input {
 .task {
     display: flex;
     background-color: rgba(223, 223, 223, 0.714);
-    border-left: 7px solid green;
     padding: 10px;
     margin-bottom: 6px;
+}
+
+.green-border {
+    border-left: 7px solid green;
 }
 
 .task:hover {
