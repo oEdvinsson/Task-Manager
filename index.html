@@ -13,25 +13,27 @@
             <h1>Task Tracker</h1>
             <button class="close-button">Close</button>
         </div>
-        <div class="input-container">
-            <h3>Add Task</h3>
-            <input type="text" id="add-task" placeholder="Add Task">
+        <div class="add-task-container">
+            <div class="input-container">
+                <h3>Add Task</h3>
+                <input type="text" id="add-task" placeholder="Add Task">
+            </div>
+            <div class="input-container">
+                <h3>Day & Time</h3>
+                <input type="datetime-local" id="day-time" placeholder="Add Day & Time" max="2024-12-31">
+            </div>
+            <div class="set-reminder-container">
+                <h3>Set Reminder</h3>
+                <input id="check-box" type="checkbox">
+            </div>
+            <button class="save-task-button">Save Task</button>
         </div>
-        <div class="input-container">
-            <h3>Day & Time</h3>
-            <input type="date" id="day-time" placeholder="Add Day & Time" max="2024-12-31">
-        </div>
-        <div class="set-reminder-container">
-            <h3>Set Reminder</h3>
-            <input id="check-box" type="checkbox">
-        </div>
-        <button class="save-task-button">Save Task</button>
         <div class="task-container">
             <div class="task green-border">
                 <div class="push-x">
-                    <h3>Doctors Appointment</h3>
-                    <h5>Feb 5th at 2:30pm</h5>
-                </div>
+                <h3>Doctors Appointment</h3>
+                <h5>Feb 5th at 2:30pm</h5>
+            </div>
                 <div>
                     <i class="fa-solid fa-xmark"></i>
                 </div>

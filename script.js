@@ -3,10 +3,13 @@ const addTask = document.getElementById('add-task');
 const dayTime = document.getElementById('day-time');
 const taskContainer = document.querySelector('.task-container');
 const checkBox = document.getElementById('check-box');
+const addTaskContainer = document.querySelector('.add-task-container');
+const closeBtn = document.querySelector('.close-button');
 
 const today = new Date().toISOString().split('T')[0];
 dayTime.setAttribute('min', today);
 let taskExist = false;
+let isVisible = true;
 
 function init() {
     const crossBtns = document.querySelectorAll('.fa-xmark');
@@ -20,16 +23,6 @@ function init() {
         })
     })
 }
-
-// const dateFormatter = function(time) {
-//     const months = [
-//         'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-//         'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-//       ];
-//     const timeFormat = time.split('-');
-//     console.log(months[timeFormat[1].toNumber()])
-//     return 'months[timeFormat[1]':
-// }
 
 
 addTask.addEventListener('input', function() {
@@ -62,7 +55,7 @@ saveTaskBtn.addEventListener('click', function() {
     task.textContent = addTask.value.charAt(0).toUpperCase() + addTask.value.slice(1);
     // Create day & time
     const time = document.createElement('h5');
-    time.textContent = dayTime.value;
+    time.textContent = dayTime.value.replace('T', ' ');
     //Add task and time to div
     headings.appendChild(task);
     headings.appendChild(time);
@@ -73,6 +66,21 @@ saveTaskBtn.addEventListener('click', function() {
     checkBox.checked = false;
     init();
     }
+});
+
+closeBtn.addEventListener('click', () => {
+    if (isVisible) {
+        addTaskContainer.style.display = 'none';
+        closeBtn.style.backgroundColor = 'rgba(45, 122, 17, 0.683)';
+        closeBtn.textContent = 'Add Task';
+        taskContainer.style.minHeight = '596px';
+    } else {
+        addTaskContainer.style.display = 'block';
+        closeBtn.style.backgroundColor = 'rgba(239, 49, 49, 0.825)';
+        closeBtn.textContent = 'Close';
+        taskContainer.style.minHeight = '350px';
+    }
+    isVisible = !isVisible;
 });
 
 init();

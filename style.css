@@ -8,6 +8,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: whitesmoke;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .task-manager {
@@ -85,6 +86,8 @@ input {
 
 .task-container {
     min-height: 350px;
+    display: flex;
+    flex-direction: column;
 }
 
 .task {
@@ -118,5 +121,6 @@ i:hover {
 .copyright-container {
     display: flex;
     justify-content: center;
+    padding-top: 10px;
     margin-top: auto;
 }
